@@ -1,0 +1,18 @@
+{
+  "name": "perf-tests",
+  "version": "1.0.0",
+  "description": "Testing porformance",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "debug": "open -a Google\\ Chrome  \"chrome://inspect\" && node --inspect-brk",
+    "garbage-collection": "debug perf_tests/object-spread.js 0 1000 10",
+    "no-garbage-collection": "npm run debug perf_tests/object-spread.js 1 1000 10"
+  },
+  "author": "iamzapata",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^0.24.3"
+  }
+}
